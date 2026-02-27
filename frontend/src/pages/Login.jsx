@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
 const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -37,7 +39,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      await axios.post('http://localhost:5000/login', formData, {
+      await axios.post(`${API_URL}/login`, formData, {
         withCredentials: true
       });
 
