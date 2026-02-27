@@ -1,0 +1,9 @@
+{
+  "name": "authapp",
+  "version": "1.0.0",
+  "dependencies": {
+    "mysql2": "^3.18.2",
+    "bcryptjs": "^3.0.3",
+    "jsonwebtoken": "^9.0.3"
+  }
+}
